@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# ARthSanskriti
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform mobile application exploring the intersection of art and Sanskrit culture, built with React Native and Expo.
 
-## Get started
+## Overview
 
-1. Install dependencies
+ARthSanskriti provides a curated experience for discovering and engaging with classical Indian art and Sanskrit traditions. The app features user authentication, personalized exploration, and profile management across iOS, Android, and web platforms.
 
-   ```bash
-   npm install
-   ```
+## Technology Stack
 
-2. Start the app
+- **Framework**: [Expo](https://expo.dev) + React Native
+- **Routing**: Expo Router (file-based)
+- **Authentication**: Firebase
+- **Language**: TypeScript
+- **Styling**: Theme-based with light/dark mode support
+- **Storage**: AsyncStorage
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Quick Start
 
 ```bash
-npm run reset-project
+# Install dependencies
+npm install
+
+# Start development server
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+From the Expo CLI, you can open the app in:
+- Android Emulator / Device
+- iOS Simulator / Device
+- Web Browser
+- [Expo Go](https://expo.dev/go)
 
-## Learn more
+## Project Structure
 
-To learn more about developing your project with Expo, look at the following resources:
+```
+app/              # Main application routes
+├── (tabs)/       # Tabbed interface (Explore, Profile)
+├── login.tsx     # Authentication screens
+├── signup.tsx
+└── welcome.tsx
+components/       # Reusable UI components
+context/          # Authentication context
+hooks/            # Custom React hooks
+libs/             # Firebase configuration
+assets/           # Images and static assets
+constants/        # Theme and app constants
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Development
 
-## Join the community
+- **Lint**: `npm run lint`
+- **Reset**: `npm run reset-project`
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The app uses [file-based routing](https://docs.expo.dev/router/introduction) for intuitive navigation structure.

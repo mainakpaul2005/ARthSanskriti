@@ -1,0 +1,2 @@
+Main Icon: Set to appstore.png (Used for iOS and general app icon).
+Android Adaptive Icon: Set to src/icons/playstore.

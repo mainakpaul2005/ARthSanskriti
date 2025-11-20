@@ -1,31 +1,51 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * ARth Sanskriti - Earthy Color Palette
+ * Inspired by Indian heritage and natural materials
  */
 
 import { Platform } from 'react-native';
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+// Color Palette
+export const AppColors = {
+  oldLace: '#F7F1E1',      // Light background
+  bone: '#E3D8C1',         // Secondary background
+  darkGoldenrod: '#B4833D', // Primary accent
+  kobicha: '#66371B',      // Dark brown text
+  coyote: '#81754B',       // Muted accent
+  earthGreen: '#3F3F2C',   // Dark text/elements
+};
 
 export const Colors = {
   light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    text: AppColors.kobicha,
+    textSecondary: AppColors.coyote,
+    background: AppColors.oldLace,
+    backgroundSecondary: AppColors.bone,
+    tint: AppColors.darkGoldenrod,
+    icon: AppColors.coyote,
+    tabIconDefault: AppColors.coyote,
+    tabIconSelected: AppColors.darkGoldenrod,
+    border: AppColors.bone,
+    card: '#FFFFFF',
+    shadow: AppColors.kobicha,
   },
   dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
+    text: AppColors.kobicha,
+    textSecondary: AppColors.coyote,
+    background: AppColors.oldLace,
+    backgroundSecondary: AppColors.bone,
+    tint: AppColors.darkGoldenrod,
+    icon: AppColors.coyote,
+    tabIconDefault: AppColors.coyote,
+    tabIconSelected: AppColors.darkGoldenrod,
+    border: AppColors.bone,
+    card: '#FFFFFF',
+    shadow: AppColors.kobicha,
   },
 };
+
+// Single theme - always use light mode colors
+export const AppTheme = Colors.light;
 
 export const Fonts = Platform.select({
   ios: {
@@ -51,3 +71,18 @@ export const Fonts = Platform.select({
     mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
 });
+
+// App Font Families
+export const FontFamily = {
+  // Body text - Modern and clean
+  regular: 'Poppins_400Regular',
+  light: 'Poppins_300Light',
+  medium: 'Poppins_500Medium',
+  semiBold: 'Poppins_600SemiBold',
+  bold: 'Poppins_700Bold',
+  
+  // Headings - Elegant and cultural
+  heading: 'Merriweather_700Bold',
+  headingBlack: 'Merriweather_900Black',
+  headingRegular: 'Merriweather_400Regular',
+};
